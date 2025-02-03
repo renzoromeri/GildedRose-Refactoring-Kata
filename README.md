@@ -38,13 +38,19 @@ Se tuvieron como referencia los principios solid y kiss, como enfoques de desarr
 5. Probar la API con Postman
 
 5.1. Obtener los Ítems (GET)
+
 5.1.1. Abre Postman y crea una solicitud GET.
+
 5.1.2. Ingresa la URL: http://localhost:8080/items
+
 5.1.3. Haz clic en Send para ver los ítems agregados al iniciar la aplicación.
 
 5.2. Actualizar la lista Ítem (POST)
+
 5.2.1. Crea una solicitud POST.
+
 5.2.2. Ingresa la URL: http://localhost:8080/items/update
+
 5.2.3. Haz clic en Send para ver los ítems actualizados.
 
 6. Ejecuta las pruebas con Maven (Dentro del directorio del proyecto, ejecuta: mvn test)
