@@ -1,5 +1,6 @@
 package com.rr.ProyectoGildedRose;
 
+import com.rr.ProyectoGildedRose.builder.ItemBuilder;
 import com.rr.ProyectoGildedRose.model.Item;
 import com.rr.ProyectoGildedRose.service.ItemService;
 import java.util.List;
@@ -21,12 +22,20 @@ public class ProyectoGildedRoseApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
+//        List<Item> items = List.of(
+//                new Item("Aged Brie", 10, 20),
+//                new Item("Backstage passes", 15, 30),
+//                new Item("Sulfuras", 5, 80),
+//                new Item("Conjured", 3, 6),
+//                new Item("Default", 9, 7)
+//        );
+        
         List<Item> items = List.of(
-                new Item("Aged Brie", 10, 20),
-                new Item("Backstage passes", 15, 30),
-                new Item("Sulfuras", 5, 80),
-                new Item("Conjured", 3, 6),
-                new Item("Default", 9, 7)
+            new ItemBuilder().withName("Aged Brie").withSellIn(10).withQuality(20).build(),
+            new ItemBuilder().withName("Backstage passes").withSellIn(15).withQuality(30).build(),
+            new ItemBuilder().withName("Sulfuras").withSellIn(5).withQuality(80).build(),
+            new ItemBuilder().withName("Conjured").withSellIn(3).withQuality(6).build(),
+            new ItemBuilder().withName("Default").withSellIn(9).withQuality(7).build()
         );
 
         items.forEach(itemService::addItem);
